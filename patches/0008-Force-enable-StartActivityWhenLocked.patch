@@ -1,17 +1,17 @@
-From af7b56d7565bda59f9d8ea33a640b53ea7f4cda0 Mon Sep 17 00:00:00 2001
+From f92eb6828b6bf4eb9a3e020e8827cdd2903a663a Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
 Date: Tue, 15 Oct 2024 19:06:16 +0200
-Subject: [PATCH 8/9] Force enable StartActivityWhenLocked
+Subject: [PATCH 08/10] Force enable StartActivityWhenLocked
 
 MIUI sends this with the intent, but on AOSP we don't get this parameter
 ---
- smali/com/android/camera/p2.smali | 57 ++-----------------------------
+ smali/com/android/camera/s2.smali | 57 ++-----------------------------
  1 file changed, 3 insertions(+), 54 deletions(-)
 
-diff --git a/smali/com/android/camera/p2.smali b/smali/com/android/camera/p2.smali
-index fef81490..959f2777 100644
---- a/smali/com/android/camera/p2.smali
-+++ b/smali/com/android/camera/p2.smali
+diff --git a/smali/com/android/camera/s2.smali b/smali/com/android/camera/s2.smali
+index f4c73bbb..3200ed4d 100644
+--- a/smali/com/android/camera/s2.smali
++++ b/smali/com/android/camera/s2.smali
 @@ -276,62 +276,11 @@
  .end method
  
@@ -79,5 +79,5 @@ index fef81490..959f2777 100644
  
  .method public static N(Landroid/content/Intent;)Z
 -- 
-2.48.1
+2.49.0
 

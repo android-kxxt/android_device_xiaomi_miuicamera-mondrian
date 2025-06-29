@@ -1,18 +1,18 @@
-From d3b58a56b74bcfc2be75509cc4159e3db5b2ccc8 Mon Sep 17 00:00:00 2001
+From c17a680da86fd7e130a6685836e3558be5208fe3 Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
 Date: Tue, 15 Oct 2024 18:58:34 +0200
-Subject: [PATCH 7/9] Read AOSP integer camera_launch_source intent in
+Subject: [PATCH 07/10] Read AOSP integer camera_launch_source intent in
  STILL_IMAGE_CAMERA case
 
 MIUI changed the camera_launch_source to be a string, but AOSP provides integers.
 ---
- smali/com/android/camera/p2.smali | 78 +++++++++++--------------------
+ smali/com/android/camera/s2.smali | 78 +++++++++++--------------------
  1 file changed, 27 insertions(+), 51 deletions(-)
 
-diff --git a/smali/com/android/camera/p2.smali b/smali/com/android/camera/p2.smali
-index 7b684848..fef81490 100644
---- a/smali/com/android/camera/p2.smali
-+++ b/smali/com/android/camera/p2.smali
+diff --git a/smali/com/android/camera/s2.smali b/smali/com/android/camera/s2.smali
+index 567beb38..f4c73bbb 100644
+--- a/smali/com/android/camera/s2.smali
++++ b/smali/com/android/camera/s2.smali
 @@ -909,25 +909,21 @@
  
      const-string v0, "com.android.systemui.camera_launch_source"
@@ -101,7 +101,7 @@ index 7b684848..fef81490 100644
 +    return-object v2
  
      :cond_0
-     iget-object p0, p0, Lcom/android/camera/p2;->a:Landroid/content/Intent;
+     iget-object p0, p0, Lcom/android/camera/s2;->a:Landroid/content/Intent;
 @@ -2665,35 +2667,9 @@
  
      if-eqz p0, :cond_1
@@ -141,5 +141,5 @@ index 7b684848..fef81490 100644
      :cond_1
      const/4 v2, 0x1
 -- 
-2.48.1
+2.49.0
 

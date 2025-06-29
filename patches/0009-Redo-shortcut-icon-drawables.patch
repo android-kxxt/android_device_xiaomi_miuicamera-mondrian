@@ -1,7 +1,7 @@
-From c7b01540c501316ac4bfb871326b120793a71f6e Mon Sep 17 00:00:00 2001
+From 68d27ec22c360e888838b598b8c12cfe5ff740e4 Mon Sep 17 00:00:00 2001
 From: Arian <arian.kulmer@web.de>
 Date: Thu, 9 Jan 2025 23:47:48 +0100
-Subject: [PATCH 9/9] Redo shortcut icon drawables
+Subject: [PATCH 09/10] Redo shortcut icon drawables
 
 ---
  res/drawable/shortcat_cosmetic_mirror.xml   | 21 ++++++++++++++++-----
@@ -152,5 +152,5 @@ index a2e67750..c0b9cd5f 100644
 +    </foreground>
 +</adaptive-icon>
 -- 
-2.48.1
+2.49.0
 
